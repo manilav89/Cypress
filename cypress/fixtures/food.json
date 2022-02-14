@@ -1,0 +1,23 @@
+{
+    "userTraking": "/user/guillermootro97/nutrition/tracking",
+    "coachNewMealPlan": "/user/guillermocoach/nutrition/meal-plan/new",
+    "coachTraking": "/user/guillermocoach/nutrition/tracking",
+    "capitalSearch": "Tomato",
+    "capitalResult": [
+        "Tomatoes, red, ripe, raw, year round average",
+        "Tomatoes, sun-dried",
+        "CAMPBELL Soup Company, CAMPBELL'S SELECT Soup, Ha",
+        "CAMPBELL Soup Company, CAMPBELL'S SOUP AT HAND, 25% Less Sodium Classic Tomato"
+    ],
+    "noFoundSearch": "kkkkkkkkkkkk",
+    "noFoundResult": "No products found.",
+    "partialSearch": "ban",
+    "partialResult": "Bananas, raw",
+    "multipleSearch": "corn tortilla",
+    "multipleResult": [
+        "Snacks, tortilla chips, unsalted, white corn",
+        "Snacks, tortilla chips, plain, yellow corn",
+        "Tortilla, blue corn, Sakwavikaviki (Hopi)",
+        "Snacks, tortilla chips, plain, white corn"
+    ]
+}

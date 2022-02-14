@@ -1,0 +1,94 @@
+{
+    "admin": {
+        "username": "paul",
+        "pass": "Virtua@14"
+    },
+    "bdd": {
+        "url": "bddautomation",
+        "id": "136129",
+        "apikey": "taHAj8gJP6XL22RP9qJR5G4ZahMyNvFMjD0i5rVWu0",
+        "secret": "CS-136129-ACCESS-r4Zo14siHy2q8LAES3iVaz0dE",
+        "members": {
+            "manager": {
+                "username": "khalithb@virtuagym.com",
+                "pass": "basha1404 "
+            },
+            "ClubManager":{
+                "username": "jenila+bddcm@virtuagym.com",
+                "pass": "Jenila@123"
+            },
+            "user": {
+                "username": "",
+                "pass": ""
+            }
+          
+        }
+    },
+
+        "invoicebdd": {
+            "url": "invoicebddautomtaion",
+            "id": "202828",
+            "apikey": "mgscdl535wg4g9gR3RRLLjq4N8squxzLPwLve1wzwr",
+            "secret": "CS-202828-ACCESS-CmByoX8UPkVTJlLUtgqcRLsJF",
+            "members": {
+                "manager": {
+                    "username": "lavanya+inbdd@digifit.eu",
+                    "pass": "vgdemo "
+                },
+                "user": {
+                    "username": "lavanya+smuser@virtuagym.com",
+                    "pass": "vgdemo"
+                }
+             
+            }
+    },
+    "guil": {
+        "url": "guillermofitness",
+        "id": "192190",
+        "apikey": "SX5mVV7UbZvm9Y8lVVf9JqBsrkmH5eVJy7pLJTLppo",
+        "secret": "CS-192190-ACCESS-H60lSRrh60SqqDoJ3OZKoX5S6",
+        "members": {
+            "manager": {
+                "username": "guillermo+manager",
+                "pass": "vgdemo"
+            },
+            "coach": {
+                "username": "guillermo+coach",
+                "pass": "vgdemo"
+            },
+            "user": {
+                "username": "guillermo+otro97",
+                "pass": "vgdemo"
+            }
+        }
+    },
+
+    "shal": {
+        "url": "fitnessblender",
+        "club_id": "2006792",
+        "apikey": "xNQEUlBrdoeXRRjwnIMcT7gTAIpadPMSObyiEjnXfL",
+        "secret": "CS-2006792-ACCESS-73qtsbaD6x9mpqxJqJejfUugm",
+        "members": {
+            "manager": {
+                "username": "fitnessblender@virtuagym.com",
+                "pass": "vgfitnessblender"
+            }
+        }
+    },
+    "newFit": {
+        "url": "newfit4free",
+        "id": "169339",
+        "apikey": "",
+        "secret": "",
+        "members": {
+            "manager": {
+                "username": "bithi+newfit4free@virtuagym.com",
+                "pass": "bithi@123"
+            },
+            "custom": {
+                "username": "Custom Discount",
+                "member_id": "1641303431"
+            }
+        }
+    }
+}
