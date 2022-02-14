@@ -1,0 +1,23 @@
+{
+  "db": {
+    "user":"webdb",
+    "password":"qwpozxmn",
+    "host":"monolith-test.cuv1xgxzxq5v.eu-west-1.rds.amazonaws.com",   
+    "database": "digifit",        
+    "options": { 
+      "encrypt": true,
+      "rowCollectionOnRequestCompletion": true
+    }
+  },
+
+  "chromeWebSecurity": false,
+  "videoUploadOnPasses": false,  
+  "viewportWidth": 1536,
+  "viewportHeight": 960,
+  "retries": { 
+    "runMode": 2,
+    "openMode": 0
+
+  }
+}
+  

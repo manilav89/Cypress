@@ -1,0 +1,59 @@
+stages:
+  - build
+  - test
+
+variables:
+  AWS_DEFAULT_REGION: eu-west-1
+  ECR_DOMAIN: 707527771771.dkr.ecr.eu-west-1.amazonaws.com
+  REPOSITORY: monolith/cypress
+  REPOSITORY_URL: $ECR_DOMAIN/$REPOSITORY
+
+
+build:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  variables:
+    IMAGE: $ECR_DOMAIN/$REPOSITORY:$CI_COMMIT_SHORT_SHA
+    IMAGE_LATEST: $ECR_DOMAIN/$REPOSITORY:latest
+  before_script:
+    - cp $CI_PROJECT_DIR/kaniko-config.json /kaniko/.docker/config.json
+  script:
+    - /kaniko/executor --context $CI_PROJECT_DIR/ --dockerfile $CI_PROJECT_DIR/Dockerfile --destination $IMAGE --destination $IMAGE_LATEST
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^[0-9]+.[0-9]+(.[0-9]+|)$/
+      when: on_success
+  tags:
+    - eks
+    - dev
+    - services
+
+test:
+  image: cypress/browsers:latest
+  stage: test
+  tags:
+    - dev
+    - services
+  script:
+    - npm ci
+    # show where the Cypress test runner binaries are cached
+    - $(npm bin)/cypress cache path
+    # show all installed versions of Cypress binary
+    - $(npm bin)/cypress cache list
+    - $(npm bin)/cypress verify
+    - $(npm bin)/cypress run --browser chrome
+  artifacts:
+    expire_in: 1 week
+    when: always
+    paths:
+      - cd $CI_PROJECT_DIR/cypress/screenshots
+      - cd $CI_PROJECT_DIR/cypress/videos
+    reports:
+      junit:
+        - test_results/junit/results.xml
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event' 
+      when: always

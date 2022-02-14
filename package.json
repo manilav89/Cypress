@@ -1,0 +1,23 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "A cypress framework to test the monolith ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.3.0",
+    "cypress-plugin-tab": "^1.0.5",
+    "cypress-sql-server": "^1.0.0",
+    "faker": "^5.5.3"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.7",
+    "mysql": "^2.18.1"
+  }
+}
